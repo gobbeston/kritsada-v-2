@@ -1,0 +1,23 @@
+# Dependencies & build outputs
+node_modules
+.nuxt
+.output
+.nitro
+.cache
+dist
+.data
+
+# Git & IDE
+.git
+.fleet
+.idea
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Local env (use compose env_file or -e at runtime)
+.env
+.env.*
+!.env.example

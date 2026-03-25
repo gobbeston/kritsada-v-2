@@ -1,0 +1,115 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', 'Inter', monospace;
+  background: #000000;
+  color: #00ff41;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 65, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 65, 0.5);
+}
+
+.glow-text {
+  text-shadow:
+    0 0 7px rgba(0, 255, 65, 0.7),
+    0 0 15px rgba(0, 255, 65, 0.5),
+    0 0 30px rgba(0, 255, 65, 0.3),
+    0 0 60px rgba(0, 255, 65, 0.15);
+}
+
+.glow-text-purple {
+  text-shadow:
+    0 0 7px rgba(0, 255, 65, 0.7),
+    0 0 15px rgba(0, 255, 65, 0.5),
+    0 0 30px rgba(0, 255, 65, 0.3);
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: rgba(0, 255, 65, 0.4);
+  margin-bottom: 3rem;
+}
+
+.glass-card {
+  background: rgba(0, 255, 65, 0.02) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 65, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background: rgba(0, 255, 65, 0.05) !important;
+    border-color: rgba(0, 255, 65, 0.3) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 255, 65, 0.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(1deg); }
+  66% { transform: translateY(8px) rotate(-1deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter-cursor {
+  0%, 100% { border-color: #00ff41; }
+  50% { border-color: transparent; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
